@@ -7,13 +7,11 @@ const Meme = () => {
       <div className="container-fluid">
         <div className="tab-content" id="myTabContent">
           <div className="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one">
-            <div className="row product-grid-4">
-              {
-                array?.map(() => (
-                  <SingleMeme />
-                ))
-              }
-            </div>
+          <div className="row product-grid-4">
+            {array?.map((item, index) => (
+              <SingleMeme key={index} />
+            ))}
+          </div>
           </div>
         </div>
       </div>
